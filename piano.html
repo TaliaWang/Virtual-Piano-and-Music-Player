@@ -1,0 +1,79 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="piano.css">
+    </head>
+    <body>
+        <h1>Virtual Piano</h1>
+        <script src="index.pack.js"></script>
+		
+        <script language = "JavaScript">
+			var audio = new Audio("dalladalla_FINALAUDIO.mp3");
+			var note = new Audio();
+            
+			function playSound(){
+				audio.play();
+			}
+			
+			function pauseSound(){
+				audio.pause();
+			}
+			
+			function stopSound(){
+				audio.pause();
+				audio.currentTime = 0;
+			}
+			
+			function playNote(id){
+				console.log(id);
+				if (id == "C4"){
+					note = new Audio("C4.wav");
+					note.play();
+				}
+				if (id == "Csharp4"){
+					note = new Audio("Csharp4.wav");
+					note.play();
+				}
+				if (id == "D4"){
+					note = new Audio("D4.wav");
+					note.play();
+				}
+				if (id == "Dsharp4"){
+					note = new Audio("Dsharp4.wav");
+					note.play();
+				}
+				if (id == "E4"){
+					note = new Audio("E4.wav");
+					note.play();
+				}
+				if (id == "F4"){
+					note = new Audio("F4.wav");
+					note.play();
+				}
+				if (id == "Fsharp4"){
+					note = new Audio("Fsharp4.wav");
+					note.play();
+				}
+				if (id == "G4"){
+					note = new Audio("G4.wav");
+					note.play();
+				}
+			}
+        </script>
+		
+		<button type="button" class = "button0" onClick="playSound()">Play Music</button>
+		<button type="button" class = "button0" onClick="pauseSound()">Pause Music</button>
+		<button type="button" class = "button0" onClick="stopSound()">Stop Music</button>
+		
+		<div>
+			<button id = "C4" class = "button1" type="button" onClick="playNote(this.id)">C4</button>
+			<button id = "Csharp4" class = "button2" type="button" onClick="playNote(this.id)">C#4</button>
+			<button id = "D4" class = "button1" type="button" onClick="playNote(this.id)">D4</button>
+			<button id = "Dsharp4" class = "button2" type="button" onClick="playNote(this.id)">D#4</button>
+			<button id = "E4" class = "button1" type="button" onClick="playNote(this.id)">E4</button>
+			<button id = "F4" class = "button1" type="button" onClick="playNote(this.id)">F4</button>
+			<button id = "Fsharp4" class = "button2" type="button" onClick="playNote(this.id)">F#4</button>
+			<button id = "G4" class = "button1" type="button" onClick="playNote(this.id)">G4</button>
+		</div>
+    </body>
+</html>

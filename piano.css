@@ -1,0 +1,42 @@
+body {
+  background-color: #FF1493;
+}
+h1 {
+  color: pink;
+  font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  text-align: center;
+}
+p {
+  color: red;
+}
+div{
+	text-align: center;
+}
+.button0 {
+	font-size: 14;
+	text-align: center;
+    background-color: white;
+	display: block;
+	margin-bottom: 1%;
+}
+.button1 {
+	/*white buttons*/
+	font-size: 14;
+	display: inline-block;
+	padding-top: 150;
+	text-align: bottom;
+    background-color: white;
+	width: 8%;
+	height: 30%
+}
+.button2 {
+	/*black buttons*/
+	font-size: 14;
+	display: inline-block;
+	padding-top: 150;
+	text-align: bottom;
+    background-color: black;
+	color: white;
+	width: 7%;
+	height: 30%
+}
