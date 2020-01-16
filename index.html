@@ -4,27 +4,28 @@
     </head>
     <body>
         <h1>Virtual Piano</h1>
+		<p class = "intro">Press the keys to play the piano. </p>
+		<p class = "intro">Select a song from the "Song List" drop-down to listen to some of my piano arrangements! </p>
+		<p class = "intro">The rest of my piano arrangements can be found on my <a href="https://youtube.com/tofutreetutorials">YouTube channel.</a></p>
+		
         <script src="index.pack.js"></script>
 		
-        <script language = "JavaScript">
-			var audio = new Audio("dalladalla_FINALAUDIO.mp3");
-			var note = new Audio();
-            
-			function playSound(){
-				audio.play();
-			}
-			
-			function pauseSound(){
-				audio.pause();
-			}
-			
-			function stopSound(){
-				audio.pause();
-				audio.currentTime = 0;
-			}
-			
+		
+		
+		<div>
+			<button id = "C4" class = "button1" type="button" onClick="playNote(this.id)">C4</button>
+			<button id = "Csharp4" class = "button2" type="button" onClick="playNote(this.id)">C#4</button>
+			<button id = "D4" class = "button1" type="button" onClick="playNote(this.id)">D4</button>
+			<button id = "Dsharp4" class = "button2" type="button" onClick="playNote(this.id)">D#4</button>
+			<button id = "E4" class = "button1" type="button" onClick="playNote(this.id)">E4</button>
+			<button id = "F4" class = "button1" type="button" onClick="playNote(this.id)">F4</button>
+			<button id = "Fsharp4" class = "button2" type="button" onClick="playNote(this.id)">F#4</button>
+			<button id = "G4" class = "button1" type="button" onClick="playNote(this.id)">G4</button>
+		</div>
+		
+		<script language = "javascript">
+		var note;
 			function playNote(id){
-				console.log(id);
 				if (id == "C4"){
 					note = new Audio("C4.wav");
 					note.play();
@@ -60,19 +61,65 @@
 			}
         </script>
 		
-		<button type="button" class = "button0" onClick="playSound()">Play Music</button>
-		<button type="button" class = "button0" onClick="pauseSound()">Pause Music</button>
-		<button type="button" class = "button0" onClick="stopSound()">Stop Music</button>
 		
-		<div>
-			<button id = "C4" class = "button1" type="button" onClick="playNote(this.id)">C4</button>
-			<button id = "Csharp4" class = "button2" type="button" onClick="playNote(this.id)">C#4</button>
-			<button id = "D4" class = "button1" type="button" onClick="playNote(this.id)">D4</button>
-			<button id = "Dsharp4" class = "button2" type="button" onClick="playNote(this.id)">D#4</button>
-			<button id = "E4" class = "button1" type="button" onClick="playNote(this.id)">E4</button>
-			<button id = "F4" class = "button1" type="button" onClick="playNote(this.id)">F4</button>
-			<button id = "Fsharp4" class = "button2" type="button" onClick="playNote(this.id)">F#4</button>
-			<button id = "G4" class = "button1" type="button" onClick="playNote(this.id)">G4</button>
+		<button type="button" class = "button0" onClick="playMusic()">Play Music ▶️</button>
+		<button type="button" class = "button0" onClick="pauseMusic()">Pause Music ⏸️</button>
+		<button type="button" class = "button0" onClick="stopMusic()">Stop Music ⏹</button>
+
+		<script language = "JavaScript">
+			var numSongs = 5;
+			var songs = new Array(numSongs);
+			var audio;
+            
+			function startMusic(id){
+				if (audio != null){
+					stopMusic();
+				}
+				switch (id){
+					case "dalladalla_FINALAUDIO.mp3":
+						audio = new Audio("dalladalla_FINALAUDIO.mp3");
+						break;
+					case "solo_FINALAUDIO.mp3":
+						audio = new Audio("solo_FINALAUDIO.mp3");
+						break;
+					case "abrandnewday_FINALAUDIO.mp3":
+						audio = new Audio("abrandnewday_FINALAUDIO.mp3");
+						break;
+					case "psycho_FINALAUDIO.wav":
+						audio = new Audio("psycho_FINALAUDIO.wav");
+						break;
+					case "shootme_FINALAUDIO.mp3":
+						audio = new Audio("shootme_FINALAUDIO.mp3");
+						break;
+					default:
+						break;
+				}
+				audio.play();
+			}
+
+			function playMusic(){
+				audio.play();
+			}
+				
+			function pauseMusic(){
+				audio.pause();
+			}
+			
+			function stopMusic(){
+				audio.pause();
+				audio.currentTime = 0;
+			}
+		</script>
+		
+		<div class="dropdown">
+			<button class="dropbtn">Song List</button>
+			<div class="dropdown-content">
+					<a id = "dalladalla_FINALAUDIO.mp3" onClick="startMusic(this.id)">Itzy: Dalla Dalla</a>
+					<a id = "solo_FINALAUDIO.mp3" onClick="startMusic(this.id)">Jennie: Solo</a>
+					<a id = "abrandnewday_FINALAUDIO.mp3" onClick="startMusic(this.id)">BTS: A Brand New Day</a>
+					<a id = "psycho_FINALAUDIO.wav" onClick="startMusic(this.id)">Red Velvet: Psycho</a>
+					<a id = "shootme_FINALAUDIO.mp3" onClick="startMusic(this.id)">Day6: Shoot Me</a>
+			</div>
 		</div>
     </body>
 </html>
