@@ -1,0 +1,132 @@
+body {
+  //background-color: #0288d1;
+  background-image: url("carolinie-cavalli-Qw3w0oBH63s-unsplash.jpg");
+  background-position: center;
+}
+div[id = "intro"]{
+  background-color:#87CEFA;
+  margin-right: 20%;
+  margin-left: 20%;
+  opacity: 0.8;
+}
+div[id = "octave4"]{
+  /*float: left;*/
+  position: center;
+  display: inline-block;
+
+}
+div[id = "octave5"]{
+  /*float: right;*/
+  position: center;
+  display: inline-block;
+}
+h1 {
+	color: white;
+	font-family: Century Gothic, sans-serif;
+	font-size: 70;
+	text-align: center;
+}
+p.intro {
+	color: white;
+	text-align: center;
+	font-family: Century Gothic, sans-serif;
+  font-size: 40;
+}
+a:link{
+	color: white;
+}
+a:visited{
+	color: white;
+}
+div{
+	text-align: center;
+}
+div.scroll{
+  overflow-x:scroll;
+  white-space: nowrap;
+}
+button{
+  font-family: Century Gothic, sans-serif;
+  font-size: 25;
+  margin-bottom: 0.1%;
+}
+/* play/pause/stop*/
+.button0 {
+	text-align: center;
+  position: center;
+  display: inline-block;
+  background-color: white;
+	margin-bottom: 1%;
+	/*border: double;*/
+}
+/* Change the background colour of the play/pause/stop buttons on hover */
+.button0:hover{background-color: #87CEFA;}
+
+/*white keys*/
+.button1 {
+	display: inline-block;
+	padding-top: 200;
+	text-align: bottom;
+  background-color: white;
+	width: 150;
+	height: 400;
+
+}
+/*black keys*/
+.button2 {
+	display: inline-block;
+	padding-top: 200;
+	text-align: bottom;
+  background-color: black;
+	color: white;
+	width: 150;
+	height: 400;
+}
+
+
+/* Overall Dropdown */
+.dropdown {
+  position: center;
+  display: block;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: white;
+  display: inline-block;
+  position: center;
+  text-align: bottom;
+  color: black;
+  padding: 16px;
+  font-size: 25;
+  border: double;
+}
+
+/* Dropdown section*/
+.dropdown-content {
+  display: none;
+  position: center;
+  background-color: #f1f1f1;
+  margin-right: 30%;
+  margin-left: 30%;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* text inside dropdown*/
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  font-family: Century Gothic, sans-serif;
+  font-size: 25;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change colour of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background colour of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #87CEFA;}
